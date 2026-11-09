@@ -11,7 +11,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Glasswave-V4.1-Tauri-Windows
+        working-directory: Glasswave-V4.1-Tauri-Windows/Glasswave-V4.1-Tauri
 
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -31,8 +31,8 @@ jobs:
       - name: Build Glasswave
         run: npm run tauri build
 
-      - name: Upload EXE
+      - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
           name: Glasswave-V4.1-Windows-Installer
-          path: Glasswave-V4.1-Tauri-Windows/src-tauri/target/release/bundle/nsis/*.exe
+          path: Glasswave-V4.1-Tauri-Windows/Glasswave-V4.1-Tauri/src-tauri/target/release/bundle/nsis/*.exe
