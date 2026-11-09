@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Glasswave",
+  "version": "4.1.0",
+  "identifier": "com.glasswave.player",
+  "build": {"beforeDevCommand": "npm run dev", "devUrl": "http://127.0.0.1:1420", "beforeBuildCommand": "npm run build", "frontendDist": "../dist"},
+  "app": {"windows": [{"title": "Glasswave", "width": 1080, "height": 700, "minWidth": 760, "minHeight": 520, "resizable": true}], "security": {"csp": "default-src 'self' asset: http://asset.localhost; img-src 'self' asset: http://asset.localhost data: blob: https:; media-src 'self' asset: http://asset.localhost blob: file:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src ipc: http://ipc.localhost https:; frame-src https://open.spotify.com https://w.soundcloud.com https://soundcloud.com;"}},
+  "bundle": {"active": true, "targets": ["nsis"], "shortDescription": "A minimal glass music player"}
+}

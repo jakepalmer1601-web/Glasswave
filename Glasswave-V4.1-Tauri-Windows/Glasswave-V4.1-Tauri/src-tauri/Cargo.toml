@@ -1,0 +1,16 @@
+[package]
+name = "glasswave"
+version = "4.1.0"
+description = "Minimal desktop music player"
+authors = ["Glasswave"]
+edition = "2021"
+
+[lib]
+name = "glasswave_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
